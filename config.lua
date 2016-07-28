@@ -10,5 +10,21 @@ application =
 		--imageSuffix = {
 		--	["@2x"] = 2,
 		--}
-	}
+	},
+
+	notification =
+    {
+        google = 
+        { 
+        	projectNumber = "819373458497" 
+        },
+        
+        iphone =
+        {
+            types =
+            {
+                "badge", "sound", "alert"
+            }
+        }
+    }
 }

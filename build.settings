@@ -3,7 +3,16 @@
 
 settings = {
 	
-	orientation = {
+	plugins =
+	{
+		["plugin.notifications"] =
+		{
+			publisherId = "com.coronalabs"
+		},
+	},
+
+	orientation = 
+	{
 		default = "portrait",
 		supported = { "portrait", }
 	},
@@ -13,29 +22,40 @@ settings = {
 			UIStatusBarHidden = false,
 			UIPrerenderedIcon = true, -- set to false for "shine" overlay
 			UIApplicationExitsOnSuspend = false,
-            CFBundleShortVersionString = "1.20140922",
+            CFBundleShortVersionString = "1.20150924",
             CFBundleIconFiles = {
-            "Icon.png",
-            "Icon@2x.png",
-            "Icon-Small-40.png",
-            "Icon-Small-40@2x.png",
-            "Icon-60.png",
-            "Icon-60@2x.png",
-            "Icon-72.png",
-            "Icon-72@2x.png",
-            "Icon-76.png",
-            "Icon-76@2x.png",
-            "Icon-Small-50.png",
-            "Icon-Small-50@2x.png",
-            "Icon-Small.png",
-            "Icon-Small@2x.png"
-            },
+            	"Icon.png",
+            	"Icon@2x.png",
+            	"Icon-Small-40.png",
+            	"Icon-Small-40@2x.png",
+            	"Icon-60.png",
+            	"Icon-60@2x.png",
+            	"Icon-72.png",
+            	"Icon-72@2x.png",
+            	"Icon-76.png",
+            	"Icon-76@2x.png",
+            	"Icon-Small-50.png",
+           		"Icon-Small-50@2x.png",
+            	"Icon-Small.png",
+            	"Icon-Small@2x.png"
+   			},
 		}
 	},
 	
-	-- Android permissions
+	android =
+	{
+		permissions =
+		{
+			{ name = ".permission.C2D_MESSAGE", protectionLevel = "signature" },
+		},
+		usesPermissions =
+		{
+			"android.permission.INTERNET",
+			"android.permission.GET_ACCOUNTS",
+			"android.permission.RECEIVE_BOOT_COMPLETED",
+			"com.google.android.c2dm.permission.RECEIVE",
+			".permission.C2D_MESSAGE",
+		},
+	},
 
-	androidPermissions = {
-  		"android.permission.INTERNET",
-  	},
 }
